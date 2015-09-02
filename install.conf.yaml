@@ -9,6 +9,7 @@
         create: true
         path: ruby-build/
     ~/.gemrc: gemrc
+    ~/.gitignore: gitignore
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]

@@ -3,3 +3,5 @@
 	email = anthonyhobbs@gmail.com
 [push]
 	default = simple
+[core]
+	excludesfile = ~/.gitignore
