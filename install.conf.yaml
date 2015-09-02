@@ -5,5 +5,8 @@
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
+    ~/.oh-my-zsh: oh-my-zsh/
 
+- shell:
+  - [git submodule update --init --recursive, Installing/updating submodules]
 
