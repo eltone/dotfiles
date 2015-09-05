@@ -5,11 +5,12 @@
     ~/.zshrc: zshrc
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.rbenv: rbenv/
+    ~/.gemrc: gemrc
+    ~/.gitignore: gitignore
+- link:
     ~/.rbenv/plugins/ruby-build:
         create: true
         path: ruby-build/
-    ~/.gemrc: gemrc
-    ~/.gitignore: gitignore
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
