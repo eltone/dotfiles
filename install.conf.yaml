@@ -11,6 +11,7 @@
     ~/.gemrc: gemrc
     ~/.gitignore: gitignore
     ~/.ctags: ctags
+    ~/.tmux.conf: tmux.conf
 - link:
     ~/.rbenv/plugins/ruby-build:
         create: true
