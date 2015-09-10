@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing/updating submodules]
+
 - link:
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
@@ -12,7 +15,4 @@
     ~/.rbenv/plugins/ruby-build:
         create: true
         path: ruby-build/
-
-- shell:
-  - [git submodule update --init --recursive, Installing/updating submodules]
 
