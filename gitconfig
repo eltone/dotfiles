@@ -4,7 +4,7 @@
 [push]
 	default = simple
 [core]
-	excludesfile = /Users/ahobbs/.gitignore
+	excludesfile = ~/.gitignore
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
