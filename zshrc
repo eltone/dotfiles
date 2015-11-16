@@ -45,7 +45,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby sublime npm mix-fast vagrant)
+plugins=(git ruby sublime npm mix-fast vagrant bundler osx tmux the_silver_searcher brew)
 
 # User configuration
 
