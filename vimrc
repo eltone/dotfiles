@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-ruby/vim-ruby'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,7 +40,7 @@ if &t_Co < 256
 	set nocursorline " looks bad in this mode
 else
 	set background=dark
-	let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
+	let g:solarized_termcolors=16 " instead of 16 color with mapping in terminal
 	colorscheme solarized
 endif
 
