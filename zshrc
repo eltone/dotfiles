@@ -83,6 +83,9 @@ eval "$(rbenv init -)"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export GO15VENDOREXPERIMENT=1
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT/bin
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$PATH:$SCALA_HOME/bin
 export SBT_HOME=/usr/local/share/sbt
