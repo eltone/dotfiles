@@ -25,6 +25,3 @@
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = git@github.com:vim-ruby/vim-ruby.git
-[submodule "prelude"]
-	path = prelude
-	url = git@github.com:bbatsov/prelude.git
