@@ -32,6 +32,7 @@ values."
      erlang
      elixir
      ruby
+     javascript
      html
      colors
      ;; editorconfig
@@ -44,6 +45,7 @@ values."
      syntax-checking
      spotify
      version-control
+     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -258,6 +260,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
+
+  (setq js-indent-level 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
