@@ -13,6 +13,9 @@
     ~/.gitignore: gitignore
     ~/.ctags: ctags
     ~/.tmux.conf: tmux.conf
+    ~/.tmux/plugins/tpm: 
+        create: true
+        path: tpm
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.spacemacs: spacemacs
