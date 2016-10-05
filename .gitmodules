@@ -28,3 +28,9 @@
 [submodule "tpm"]
 	path = tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "fzf-zsh"]
+	path = fzf-zsh
+	url = git@github.com:Treri/fzf-zsh.git
+[submodule "fzf"]
+	path = fzf
+	url = git@github.com:junegunn/fzf.git
