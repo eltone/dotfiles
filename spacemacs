@@ -29,11 +29,10 @@ values."
      emacs-lisp
      (git :variables
           magit-status-show-hashes-in-headers t)
-     markdown
-     ;; company-mode
+     (markdown :variables markdown-live-preview-engine 'vmd)
      erlang
      elixir
-     ruby
+     (ruby :variables ruby-version-manager 'rbenv)
      javascript
      html
      colors
@@ -46,7 +45,6 @@ values."
      scala
      shell-scripts
      terraform
-     ;; spotify
      version-control
      yaml
      )
@@ -266,8 +264,8 @@ you should place you code here."
 
   (setq js-indent-level 2
         ns-use-srgb-colorspace t
-        helm-ag-use-agignore t
-        ruby-version-manager `rbenv)
+        helm-ag-use-agignore t)
+
   (defun alchemist-run-credo-on-project ()
     "Run credo on project"
     (interactive)
