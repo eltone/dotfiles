@@ -1,7 +1,7 @@
 - clean: ['~']
 
 - shell:
-  - [git submodule update --init --recursive, Installing/updating submodules]
+  - [git submodule update --init --recursive --remote, Installing/updating submodules]
 
 - link:
     ~/.gitconfig: gitconfig

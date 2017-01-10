@@ -275,7 +275,8 @@ you should place you code here."
   (setq ediff-diff-options "-w")
   (eval-after-load 'flycheck
     '(flycheck-credo-setup))
-  (add-hook 'elixir-mode-hook 'flycheck-mode))
+  (add-hook 'elixir-mode-hook 'flycheck-mode)
+  (spacemacs|diminish rubocop-mode " ⓡ" " r"))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
