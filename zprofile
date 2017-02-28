@@ -1,3 +1,4 @@
+#!/bin/zsh
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -12,4 +13,8 @@ export PATH=$PATH:$SCALA_HOME/bin
 export SBT_HOME=/usr/local/share/sbt
 export PATH=$PATH:$SBT_HOME/bin
 export PATH=$PATH:/usr/local/share/idea/bin
-source $HOME/.zshenv_local
+if [ -e $HOME/.zshenv_local ]
+then
+  source $HOME/.zshenv_local
+fi
+
