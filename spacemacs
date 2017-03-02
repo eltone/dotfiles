@@ -279,6 +279,7 @@ you should place you code here."
   (eval-after-load 'flycheck
     '(flycheck-credo-setup))
   (add-hook 'elixir-mode-hook 'flycheck-mode)
+  (add-hook 'dockerfile-mode-hook 'flycheck-mode)
   (spacemacs|diminish rubocop-mode " ⓡ" " r")
   (setq helm-ag-base-command "rg --vimgrep --no-heading")
   (setq mac-right-option-modifier nil))
