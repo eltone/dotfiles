@@ -25,6 +25,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
+     common-lisp
      csv
      ;; better-defaults
      docker
