@@ -13,8 +13,11 @@ export PATH=$PATH:$SCALA_HOME/bin
 export SBT_HOME=/usr/local/share/sbt
 export PATH=$PATH:$SBT_HOME/bin
 export PATH=$PATH:/usr/local/share/idea/bin
+export PATH=$PATH:/usr/local/share/dotnet
 if [ -e $HOME/.zshenv_local ]
 then
   source $HOME/.zshenv_local
 fi
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
