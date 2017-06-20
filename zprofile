@@ -14,6 +14,7 @@ export SBT_HOME=/usr/local/share/sbt
 export PATH=$PATH:$SBT_HOME/bin
 export PATH=$PATH:/usr/local/share/idea/bin
 export PATH=$PATH:/usr/local/share/dotnet
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 if [ -e $HOME/.zshenv_local ]
 then
   source $HOME/.zshenv_local

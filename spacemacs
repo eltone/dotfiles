@@ -286,7 +286,12 @@ you should place you code here."
   (add-hook 'dockerfile-mode-hook 'flycheck-mode)
   (spacemacs|diminish rubocop-mode " ⓡ" " r")
   (setq helm-ag-base-command "rg --vimgrep --no-heading")
-  (setq mac-right-option-modifier nil))
+  (setq mac-right-option-modifier nil)
+  (defun web-mode-two-space-tabs ()
+    "Hook for web mode for more compact json"
+    (setq web-mode-code-indent-offset 2))
+  (add-hook 'web-mode-hook 'web-mode-two-space-tabs)
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
