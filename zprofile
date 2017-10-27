@@ -22,3 +22,4 @@ fi
 
 
 export PATH="$HOME/.cargo/bin:$PATH"
+alias rake='noglob rake'

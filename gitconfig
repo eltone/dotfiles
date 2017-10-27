@@ -17,3 +17,5 @@
 [mergetool]
 	keepBackup = false
 	prompt = false
+[magit]
+	hideCampaign = true
