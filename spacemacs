@@ -31,8 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     go
-     nginx
      lua
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -40,30 +38,28 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
+     colors
      common-lisp
      csv
-     ;; better-defaults
      docker
      emacs-lisp
-     (git :variables
-          magit-status-show-hashes-in-headers t)
-     (markdown :variables markdown-live-preview-engine 'vmd)
      erlang
      elixir
-     (ruby :variables ruby-version-manager 'rbenv ruby-enable-enh-ruby-mode t)
+     (git :variables
+          magit-status-show-hashes-in-headers t)
+     go
      groovy
-     javascript
-     ivy
      html
-     colors
-     ;; editorconfig
-     ;; perspectives
-     org
+     ivy
+     javascript
+     (markdown :variables markdown-live-preview-engine 'vmd)
+     nginx
+     ;; org
      python
-     ;; spell-checking
-     syntax-checking
+     (ruby :variables ruby-version-manager 'rbenv ruby-enable-enh-ruby-mode t)
      scala
      shell-scripts
+     syntax-checking
      terraform
      version-control
      yaml
