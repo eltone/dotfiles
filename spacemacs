@@ -351,7 +351,7 @@ you should place your code here."
   (add-hook 'dockerfile-mode-hook 'flycheck-mode)
   (spacemacs|diminish rubocop-mode " ⓡ" " r")
   (setq helm-ag-base-command "rg --vimgrep --no-heading")
-  (add-to-list 'spacemacs--counsel-commands '("rg" . "rg %s %S ."))
+  (add-to-list 'spacemacs--counsel-commands '("rg" . "rg --no-heading %s %S ."))
   (setq mac-right-option-modifier nil)
   (defun web-mode-two-space-tabs ()
     "Hook for web mode for more compact json"
@@ -366,6 +366,7 @@ you should place your code here."
                       (ediff-get-region-contents ediff-current-difference 'B ediff-control-buffer))))
   (defun add-d-to-ediff-mode-map () (define-key ediff-mode-map "B" 'ediff-copy-both-to-C))
   (add-hook 'ediff-keymap-setup-hook 'add-d-to-ediff-mode-map)
+  (spacemacs/set-leader-keys (kbd "/") 'counsel-projectile-rg)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
