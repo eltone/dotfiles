@@ -20,6 +20,7 @@
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.spacemacs: spacemacs
+    ~/.asdf: asdf
 - link:
     ~/.rbenv/plugins/ruby-build:
         create: true

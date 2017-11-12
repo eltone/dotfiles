@@ -43,3 +43,6 @@
 [submodule "spacemacs-private/groovy"]
 	path = spacemacs-private/groovy
 	url = git@github.com:dcluna/spacemacs-groovy.git
+[submodule "asdf"]
+	path = asdf
+	url = git@github.com:asdf-vm/asdf.git
