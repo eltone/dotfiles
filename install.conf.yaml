@@ -32,3 +32,4 @@
 - shell:
   - [./fzf/install --bin]
   - [./powerline-fonts/install.sh]
+  - [bash ./asdf/plugins/nodejs/bin/import-release-team-keyring]
