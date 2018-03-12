@@ -28,7 +28,9 @@
     ~/.oh-my-zsh/custom/plugins/fzf: fzf
     ~/.oh-my-zsh/custom/plugins/fzf-zsh: fzf-zsh
     ~/.emacs.d/private/groovy: spacemacs-private/groovy/
-
+- asdf:
+    - plugin: nodejs
+      url: https://github.com/asdf-vm/asdf-nodejs.git
 - shell:
   - [./fzf/install --bin]
   - [./powerline-fonts/install.sh]
