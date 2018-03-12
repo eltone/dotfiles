@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     rust
      lua
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -51,7 +52,7 @@ values."
      go
      groovy
      html
-     ivy
+     (ivy :variables ivy-use-selectable-prompt t)
      javascript
      (markdown :variables markdown-live-preview-engine 'vmd)
      nginx
