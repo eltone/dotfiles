@@ -9,10 +9,8 @@
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
     ~/.oh-my-zsh: oh-my-zsh/
-    ~/.oh-my-zsh/custom/themes:
-        create: true
-        force: true
-        path: oh-my-zsh-themes
+    ~/.oh-my-zsh/custom/themes/powerlevel9k:
+        path: oh-my-zsh-themes/powerlevel9k
     ~/.rbenv: rbenv/
     ~/.gemrc: gemrc
     ~/.gitignore: gitignore
