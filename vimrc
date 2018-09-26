@@ -15,6 +15,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
