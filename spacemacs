@@ -40,6 +40,7 @@ values."
      clojure
      colors
      common-lisp
+     c-c++
      csv
      docker
      emacs-lisp
@@ -56,7 +57,7 @@ values."
      lua
      (markdown :variables markdown-live-preview-engine 'vmd)
      nginx
-     ;; org
+     org
      php
      python
      (ruby :variables ruby-version-manager 'rbenv ruby-enable-enh-ruby-mode t)
@@ -72,7 +73,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(flycheck-credo olivetti yard-mode)
+   dotspacemacs-additional-packages '(flycheck-credo olivetti yard-mode systemd)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -352,6 +353,7 @@ you should place your code here."
   (add-hook 'elixir-mode-hook 'flycheck-mode)
   (add-hook 'dockerfile-mode-hook 'flycheck-mode)
   (add-hook 'enh-ruby-mode-hook 'yard-mode)
+  (add-hook 'systemd-mode-hook 'company-mode)
   (spacemacs|diminish rubocop-mode " ⓡ" " r")
   (setq helm-ag-base-command "rg --vimgrep --no-heading")
   (add-to-list 'spacemacs--counsel-commands '("rg" . "rg --no-heading %s %S ."))
@@ -369,6 +371,7 @@ you should place your code here."
                       (ediff-get-region-contents ediff-current-difference 'B ediff-control-buffer))))
   (defun add-d-to-ediff-mode-map () (define-key ediff-mode-map "B" 'ediff-copy-both-to-C))
   (add-hook 'ediff-keymap-setup-hook 'add-d-to-ediff-mode-map)
+  (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
   (spacemacs/set-leader-keys (kbd "/") 'counsel-projectile-rg)
   (defun counsel-search-rg ()
     "Search for thing at point"
@@ -388,7 +391,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (treepy graphql yard-mode toml-mode racer sesman olivetti darkroom cargo geben phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-rust rust-mode extmap ghub let-alist clojure-snippets clj-refactor inflections edn paredit peg cider-eval-sexp-fu cider seq queue clojure-mode wgrep smex ivy-hydra counsel-projectile counsel swiper ivy go-guru go-eldoc company-go go-mode nginx-mode org-category-capture slime-company slime common-lisp-snippets winum fuzzy origami dockerfile-mode docker tablist docker-tramp groovy-mode enh-ruby-mode lua-mode vmd-mode flycheck-credo yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic pcache ob-elixir minitest insert-shebang hide-comnt csv-mode pug-mode uuidgen rake org-projectile org org-download livid-mode skewer-mode simple-httpd link-hint git-link flycheck-mix eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff goto-chg dumb-jump f diminish company-shell column-enforce-mode color-identifiers-mode undo-tree yaml-mode ws-butler window-numbering web-mode web-beautify volatile-highlights vi-tilde-fringe toc-org terraform-mode hcl-mode tagedit spacemacs-theme spaceline powerline smooth-scrolling smeargle slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters popwin persp-mode pcre2el paradox hydra spinner page-break-lines orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets open-junk-file noflet neotree move-text mmm-mode markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jade-mode info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip flycheck flx-ido flx fish-mode fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-args evil-anzu anzu eval-sexp-fu highlight erlang ensime sbt-mode scala-mode emmet-mode elisp-slime-nav diff-hl define-word company-web web-completion-data company-tern s dash-functional tern company-statistics company-quickhelp pos-tip coffee-mode clean-aindent-mode chruby bundler inf-ruby buffer-move bracketed-paste auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed alchemist company elixir-mode pkg-info epl aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup quelpa package-build use-package which-key bind-key bind-map evil solarized-theme dash)))
+    (org-mime systemd disaster company-c-headers cmake-mode clang-format treepy graphql yard-mode toml-mode racer sesman olivetti darkroom cargo geben phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-rust rust-mode extmap ghub let-alist clojure-snippets clj-refactor inflections edn paredit peg cider-eval-sexp-fu cider seq queue clojure-mode wgrep smex ivy-hydra counsel-projectile counsel swiper ivy go-guru go-eldoc company-go go-mode nginx-mode org-category-capture slime-company slime common-lisp-snippets winum fuzzy origami dockerfile-mode docker tablist docker-tramp groovy-mode enh-ruby-mode lua-mode vmd-mode flycheck-credo yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic pcache ob-elixir minitest insert-shebang hide-comnt csv-mode pug-mode uuidgen rake org-projectile org org-download livid-mode skewer-mode simple-httpd link-hint git-link flycheck-mix eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff goto-chg dumb-jump f diminish company-shell column-enforce-mode color-identifiers-mode undo-tree yaml-mode ws-butler window-numbering web-mode web-beautify volatile-highlights vi-tilde-fringe toc-org terraform-mode hcl-mode tagedit spacemacs-theme spaceline powerline smooth-scrolling smeargle slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters popwin persp-mode pcre2el paradox hydra spinner page-break-lines orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets open-junk-file noflet neotree move-text mmm-mode markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jade-mode info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip flycheck flx-ido flx fish-mode fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-args evil-anzu anzu eval-sexp-fu highlight erlang ensime sbt-mode scala-mode emmet-mode elisp-slime-nav diff-hl define-word company-web web-completion-data company-tern s dash-functional tern company-statistics company-quickhelp pos-tip coffee-mode clean-aindent-mode chruby bundler inf-ruby buffer-move bracketed-paste auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed alchemist company elixir-mode pkg-info epl aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup quelpa package-build use-package which-key bind-key bind-map evil solarized-theme dash)))
  '(paradox-github-token t)
  '(projectile-project-root-files
    (quote
