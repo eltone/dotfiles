@@ -44,7 +44,6 @@ values."
      emacs-lisp
      erlang
      elixir
-     geben
      (git :variables
           magit-status-show-hashes-in-headers t)
      (groovy :variables groovy-indent-offset 2)
