@@ -21,15 +21,14 @@
         path: tpm
     ~/.vim: vim/
     ~/.vimrc: vimrc
-    ~/.spacemacs: spacemacs
     ~/.asdf: asdf
+    ~/.config/doom: config/doom
 - link:
     ~/.rbenv/plugins/ruby-build:
         create: true
         path: ruby-build/
     ~/.oh-my-zsh/custom/plugins/fzf: fzf
     ~/.oh-my-zsh/custom/plugins/fzf-zsh: fzf-zsh
-    ~/.emacs.d/private/groovy: spacemacs-private/groovy/
 - asdf:
     - plugin: nodejs
       url: https://github.com/asdf-vm/asdf-nodejs.git
