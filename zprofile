@@ -1,7 +1,5 @@
 #!/bin/zsh
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -19,6 +17,9 @@ if [ -e $HOME/.zshenv_local ]
 then
   source $HOME/.zshenv_local
 fi
+
+# macos zsh load_profile workaround
+source $HOME/.zshenv
 
 
 export PATH="$HOME/.cargo/bin:$PATH"

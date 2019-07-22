@@ -8,6 +8,7 @@
     ~/.gitconfig: gitconfig
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.oh-my-zsh/custom/themes/powerlevel9k:
         path: oh-my-zsh-themes/powerlevel9k
