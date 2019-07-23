@@ -22,3 +22,5 @@
   'inf-ruby-enable-auto-breakpoint)
 (setq doom-font (font-spec :family "Fira Code" :size 12))
 (define-key key-translation-map (kbd "M-3") (kbd "#"))
+;; auto reload files when changed on disk
+(global-auto-revert-mode t)
