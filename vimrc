@@ -11,7 +11,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'rakr/vim-one'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
@@ -43,8 +43,7 @@ if &t_Co < 256
 	set nocursorline " looks bad in this mode
 else
 	set background=dark
-	let g:solarized_termcolors=16 " instead of 16 color with mapping in terminal
-	colorscheme solarized
+	colorscheme one
 endif
 
 filetype plugin indent on
