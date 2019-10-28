@@ -24,3 +24,7 @@
 (define-key key-translation-map (kbd "M-3") (kbd "#"))
 ;; auto reload files when changed on disk
 (global-auto-revert-mode t)
+(after! org
+  (setq org-startup-folded nil))
+(after! forge
+  (load! "local.el" doom-private-dir t))

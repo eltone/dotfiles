@@ -14,9 +14,9 @@
 
        :completion
        company           ; the ultimate code completion backend
-       ;;helm             ; the *other* search engine for love and life
-       ;;ido              ; the other *other* search engine...
-       ivy              ; a search engine for love and life
+       ;;helm              ; the *other* search engine for love and life
+       ;;ido               ; the other *other* search engine...
+       ivy               ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -46,6 +46,7 @@
        :editor
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
+       ;;god               ; run Emacs commands without modifier keys
        fold              ; (nigh) universal code folding
        ;;(format +onsave)  ; automated prettiness
        ;;lispy             ; vim for lisp, for people who dont like vim
@@ -59,6 +60,7 @@
        :emacs
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
+       ibuffer           ; interactive buffer management
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -74,7 +76,7 @@
        docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
-       eval              ; run code, run (also, repls)
+       (eval +overlay)     ; run code, run (also, repls)
        flycheck          ; tasing you for every semicolon you forget
        ;;flyspell          ; tasing you for misspelling mispelling
        ;;gist              ; interacting with github gists
@@ -108,6 +110,7 @@
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;;ess               ; emacs speaks statistics
+       ;;faust             ; dsp, but you get to keep your soul
        ;;fsharp           ; ML stands for Microsoft's Language
        go                ; the hipster dialect
        ;;(haskell +intero) ; a language that's lazier than I am
@@ -126,10 +129,12 @@
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
-        +dragndrop       ; file drag & drop support
-        +ipython         ; ipython support for babel
-        +pandoc          ; pandoc integration into org's exporter
-        +present)        ; using Emacs for presentations
+        +dragndrop       ; drag & drop files/images into org buffers
+        ;+hugo            ; use Emacs for hugo blogging
+        +ipython         ; ipython/jupyter support for babel
+        +pandoc          ; export-with-pandoc support
+        +pomodoro        ; be fruitful with the tomato technique
+        +present)        ; using org-mode for presentations
        ;;perl              ; write code no one else can comprehend
        php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
@@ -147,7 +152,6 @@
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        web               ; the tubes
-       ;;vala              ; GObjective-C
 
        :email
        ;;(mu4e +gmail)       ; WIP
