@@ -18,9 +18,6 @@
   (add-hook 'window-setup-hook #'toggle-frame-maximized))
 (after! evil
   (setq evil-escape-key-sequence "fd"))
-(after! inf-ruby
-  ;; switch to inf-ruby from compile if we detect a breakpoint has been hit
-  (add-hook 'compilation-filter-hook 'inf-ruby-auto-enter))
 (setq doom-font (font-spec :family "Fira Code" :size 12))
 (define-key key-translation-map (kbd "M-3") (kbd "#"))
 ;; auto reload files when changed on disk
