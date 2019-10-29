@@ -12,12 +12,11 @@
 
 ;;; Frames/Windows
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
 (when IS-MAC
   (add-hook 'window-setup-hook #'toggle-frame-maximized))
 (after! evil
   (setq evil-escape-key-sequence "fd"))
-(after! rspec-mode
-  (setq rspec-use-rvm nil))
 (after! inf-ruby
   ;; switch to inf-ruby from compile if we detect a breakpoint has been hit
   (add-hook 'compilation-filter-hook 'inf-ruby-auto-enter))
