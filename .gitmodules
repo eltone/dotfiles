@@ -37,9 +37,6 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git@github.com:tpope/vim-surround.git
-[submodule "powerline-fonts"]
-	path = powerline-fonts
-	url = git@github.com:powerline/fonts.git
 [submodule "spacemacs-private/groovy"]
 	path = spacemacs-private/groovy
 	url = git@github.com:dcluna/spacemacs-groovy.git
