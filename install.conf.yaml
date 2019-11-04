@@ -20,7 +20,9 @@
     ~/.tmux/plugins/tpm: 
         create: true
         path: tpm
-    ~/.vim: vim/
+    ~/.vim/bundle/Vundle.vim:
+        create: true
+        path: Vundle.vim
     ~/.vimrc: vimrc
     ~/.asdf: asdf
     ~/.config/doom: config/doom
