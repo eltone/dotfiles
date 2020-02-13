@@ -7,7 +7,8 @@
   (setq ns-use-thin-smoothing t)
   (require 'exec-path-from-shell)
   (setq-default exec-path-from-shell-shell-name "/usr/local/bin/zsh")
-  (exec-path-from-shell-copy-env "PATH")
+  ;; (exec-path-from-shell-copy-env "PATH")
+  (exec-path-from-shell-copy-envs '("PATH" "RBENV_ROOT"))
   (exec-path-from-shell-initialize))
 
 ;;; Frames/Windows
@@ -28,3 +29,6 @@
   (setq org-startup-folded nil))
 (after! forge
   (load! "local.el" doom-private-dir t))
+
+;; temp workaround for modeline bug
+(fset 'battery-update #'ignore)
