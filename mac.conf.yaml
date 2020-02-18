@@ -1,0 +1,8 @@
+- link:
+    ~/.rbenv: rbenv/
+    ~/.gemrc: gemrc
+
+- link:
+    ~/.rbenv/plugins/ruby-build:
+        create: true
+        path: ruby-build/

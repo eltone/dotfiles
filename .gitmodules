@@ -55,3 +55,6 @@
 [submodule "Vundle.vim"]
 	path = Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git

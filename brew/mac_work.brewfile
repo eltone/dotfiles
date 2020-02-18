@@ -1,0 +1,11 @@
+brew 'awscli'
+brew "beanstalkd", restart_service: true
+brew 'graphviz'
+brew 'haproxy'
+brew 'mitmproxy'
+brew 'mysql-connector-c'
+brew 'packer'
+brew 'qcachegrind'
+brew "redis", restart_service: true
+brew 'subversion'
+brew 'terraform'
