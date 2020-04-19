@@ -29,3 +29,5 @@
 
 ;; temp workaround for modeline bug
 (fset 'battery-update #'ignore)
+
+(setq doom-variable-pitch-font (font-spec :family "Helvetica Neue"))
