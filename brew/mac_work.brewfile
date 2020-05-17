@@ -9,3 +9,4 @@ brew 'qcachegrind'
 brew "redis", restart_service: true
 brew 'subversion'
 brew 'terraform'
+brew 'rbenv'
