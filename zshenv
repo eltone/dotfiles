@@ -1,3 +1,2 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
