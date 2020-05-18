@@ -1,23 +1,21 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.zprofile: zprofile
-    ~/.zshrc: zshrc
-    ~/.zshenv: zshenv
-    ~/.oh-my-zsh: oh-my-zsh/
+#    ~/.gitconfig: gitconfig
+#    ~/.zprofile: zprofile
+#    ~/.zshrc: zshrc
+#    ~/.zshenv: zshenv
     ~/.gitignore: gitignore
     ~/.ctags: ctags
     ~/.tmux.conf: tmux.conf
     ~/.tmux/plugins/tpm: 
         create: true
         path: tpm
-    ~/.vim: vim/
+#    ~/.vim: vim/
     ~/.vimrc: vimrc
-    ~/.asdf: asdf
     ~/.config/doom: config/doom
-- link:
-    ~/.oh-my-zsh/custom/plugins/fzf: fzf
-    ~/.oh-my-zsh/custom/plugins/fzf-zsh: fzf-zsh
+#- link:
+#    ~/.oh-my-zsh/custom/plugins/fzf: fzf
+#    ~/.oh-my-zsh/custom/plugins/fzf-zsh: fzf-zsh
 - shell:
   - [./fzf/install --bin]
