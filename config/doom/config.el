@@ -1,6 +1,9 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here
+
+(setq doom-theme 'base16-nord)
+
 (when IS-MAC
   (setq ns-use-thin-smoothing t)
   (require 'exec-path-from-shell)
