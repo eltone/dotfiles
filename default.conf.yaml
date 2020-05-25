@@ -11,7 +11,9 @@
     ~/.tmux/plugins/tpm: 
         create: true
         path: tpm
-#    ~/.vim: vim/
+    ~/.vim/bundle/Vundle.vim:
+        create: true
+        path: Vundle.vim
     ~/.vimrc: vimrc
     ~/.config/doom: config/doom
 #- link:
@@ -19,3 +21,4 @@
 #    ~/.oh-my-zsh/custom/plugins/fzf-zsh: fzf-zsh
 - shell:
   - [./fzf/install --bin]
+  - [vim +PluginInstall +qall]
