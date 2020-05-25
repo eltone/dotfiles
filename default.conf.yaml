@@ -3,8 +3,9 @@
 - link:
 #    ~/.gitconfig: gitconfig
 #    ~/.zprofile: zprofile
-#    ~/.zshrc: zshrc
+    ~/.zshrc: zshrc
 #    ~/.zshenv: zshenv
+    ~/.zgen: zgen
     ~/.gitignore: gitignore
     ~/.ctags: ctags
     ~/.tmux.conf: tmux.conf
