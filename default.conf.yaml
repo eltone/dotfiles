@@ -17,9 +17,6 @@
         path: Vundle.vim
     ~/.vimrc: vimrc
     ~/.config/doom: config/doom
-#- link:
-#    ~/.oh-my-zsh/custom/plugins/fzf: fzf
-#    ~/.oh-my-zsh/custom/plugins/fzf-zsh: fzf-zsh
 - shell:
-  - [./fzf/install --bin]
+  - [./fzf/install]
   - [vim +PluginInstall +qall]

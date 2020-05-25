@@ -18,6 +18,16 @@ if ! zgen saved; then
     zgen prezto tmux
     zgen prezto ruby
     zgen prezto docker
+    zgen prezto history
+    zgen prezto directory
+    zgen prezto completion
+    zgen prezto prompt
+    zgen prezto history-substring-search
+
+    zgen load zsh-users/zsh-autosuggestions
+    zgen load zsh-users/zsh-completions src
 
     zgen save
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
