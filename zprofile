@@ -24,3 +24,5 @@ source $HOME/.zshenv
 
 export PATH="$HOME/.cargo/bin:$PATH"
 alias rake='noglob rake'
+
+eval "$(rbenv init -)"
