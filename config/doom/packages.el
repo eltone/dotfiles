@@ -6,4 +6,5 @@
 ;; (package! another-package :recipe (:fetcher github :repo "username/repo"))
 ;; (package! builtin-package :disable t)
 (package! exec-path-from-shell)
-
+(package! flatbuffers-mode
+   :recipe (:host github :repo "Asalle/flatbuffers-mode"))
