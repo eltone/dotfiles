@@ -2,7 +2,7 @@
 
 ;; Place your private configuration here
 
-(setq doom-theme 'base16-nord)
+(setq doom-theme 'doom-nord)
 
 (when IS-MAC
   (setq ns-use-thin-smoothing t)
@@ -25,7 +25,9 @@
  ((find-font (font-spec :name "Fira Code"))
   (setq doom-font (font-spec :name "Fira Code" :size 12)))
  ((find-font (font-spec :name "FiraMono Nerd Font"))
-  (setq doom-font (font-spec :name "FiraMono Nerd Font" :size 12))))
+  (setq doom-font (font-spec :name "FiraMono Nerd Font" :size 12)))
+ ((find-font (font-spec :name "FiraCode Nerd Font" :size 12))
+  (setq doom-font (font-spec :name "FiraCode Nerd Font" :size 12))))
 
 (when IS-LINUX
   (font-put doom-font :weight 'semi-light))
