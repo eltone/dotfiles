@@ -31,4 +31,5 @@ if ! zgen saved; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zshenv_local ] && source ~/.zshenv_local
 eval "$(zoxide init zsh)"
