@@ -36,6 +36,7 @@
 ;; auto reload files when changed on disk
 (global-auto-revert-mode t)
 (after! org
-  (setq org-startup-folded nil))
+  (setq org-startup-folded nil)
+  (setq org-agenda-files '("~/org/work" "~/org/personal")))
 (after! forge
   (load! "local.el" doom-private-dir t))
