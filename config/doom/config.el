@@ -2,7 +2,7 @@
 
 ;; Place your private configuration here
 
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-one)
 
 (when IS-MAC
   (setq ns-use-thin-smoothing t)
@@ -37,6 +37,35 @@
 (global-auto-revert-mode t)
 (after! org
   (setq org-startup-folded nil)
-  (setq org-agenda-files '("~/org/work" "~/org/personal")))
-(after! forge
-  (load! "local.el" doom-private-dir t))
+  (setq org-agenda-files '("~/org/work" "~/org/personal"))
+  (setq org-agenda-prefix-format
+   '((agenda . " %i %-30:c%?-12t% s")
+     (todo . " %i %-12:c")
+     (tags . " %i %-12:c")
+     (search . " %i %-12:c")))
+  (add-to-list 'org-modules '(org-habit)))
+
+(after! terraform
+  (setq terraform-format-on-save-mode t))
+
+(after! spell
+  (setq ispell-dictionary "en_GB-ise"))
+
+(after! lsp-mode
+  (setq lsp-lens-enable t
+        lsp-lens-place-position 'above-line
+        lsp-diagnostic-clean-after-change t))
+
+(after! lsp-ui
+  (setq lsp-ui-doc-enable t
+        lsp-ui-doc-show-with-cursor nil
+        lsp-ui-sideline-show-code-actions nil))
+
+(defun private/buffer-namespace ()
+  (subst-char-in-string ?/ ?.
+                        (file-relative-name
+                         (directory-file-name
+                          (file-name-directory buffer-file-name))
+                         (projectile-project-root))))
+
+(load! "local.el" doom-private-dir t)

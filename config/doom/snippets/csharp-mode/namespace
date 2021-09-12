@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: smart namespace
+# uuid: smartnamespace
+# key: namespace
+# --
+
+namespace ${1:`(private/buffer-namespace)`}
+{
+    $2
+}

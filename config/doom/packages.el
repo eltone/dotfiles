@@ -6,3 +6,4 @@
 ;; (package! another-package :recipe (:fetcher github :repo "username/repo"))
 ;; (package! builtin-package :disable t)
 (package! exec-path-from-shell)
+(load! "local-packages.el" doom-private-dir t)
