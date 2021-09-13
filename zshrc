@@ -41,4 +41,3 @@ alias k=kubectl
 [ -f ~/.zshenv_local ] && source ~/.zshenv_local
 eval "$(zoxide init zsh)"
 
-. /usr/local/opt/asdf/asdf.sh
