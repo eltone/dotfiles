@@ -8,16 +8,14 @@
   (setq ns-use-thin-smoothing t)
   (require 'exec-path-from-shell)
   (setq-default exec-path-from-shell-shell-name "/usr/local/bin/zsh")
-  ;; (exec-path-from-shell-copy-env "PATH")
   (exec-path-from-shell-copy-envs '("PATH" "RBENV_ROOT"))
   (exec-path-from-shell-initialize)
-  (setq doom-variable-pitch-font (font-spec :family "Helvetica Neue")))
+  (setq doom-variable-pitch-font (font-spec :family "Helvetica Neue"))
+  (add-hook 'window-setup-hook #'toggle-frame-maximized))
 
 ;;; Frames/Windows
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-(when IS-MAC
-  (add-hook 'window-setup-hook #'toggle-frame-maximized))
+;(add-to-list 'default-frame-alist '(ns-appearance . dark))
 (after! evil
   (setq evil-escape-key-sequence "fd"))
 
@@ -36,6 +34,7 @@
 ;; auto reload files when changed on disk
 (global-auto-revert-mode t)
 (after! org
+  (add-to-list 'org-modules 'org-habit)
   (setq org-startup-folded nil)
   (setq org-agenda-files '("~/org/work" "~/org/personal"))
   (setq org-agenda-prefix-format
@@ -43,13 +42,25 @@
      (todo . " %i %-12:c")
      (tags . " %i %-12:c")
      (search . " %i %-12:c")))
-  (add-to-list 'org-modules '(org-habit)))
+  (setq org-capture-templates
+    '(("w" "Work Todo" entry (file+headline "~/org/work/work.org" "Inbox")
+     "* TODO %?\n  %i\n")))
+  (setq org-journal-file-type 'weekly)
+  (set-company-backend! 'org-mode nil))
+
+(after! org-tree-slide
+  (setq org-tree-slide-slide-in-effect nil)
+  (advice-remove 'org-tree-slide--display-tree-with-narrow
+                 #'+org-present--hide-first-heading-maybe-a))
 
 (after! terraform
   (setq terraform-format-on-save-mode t))
 
 (after! spell
   (setq ispell-dictionary "en_GB-ise"))
+
+(after! spell-fu
+  (add-to-list 'spell-fu-ignore-modes 'yaml-mode))
 
 (after! lsp-mode
   (setq lsp-lens-enable t
@@ -58,7 +69,8 @@
 
 (after! lsp-ui
   (setq lsp-ui-doc-enable t
-        lsp-ui-doc-show-with-cursor nil
+        lsp-ui-doc-show-with-cursor t
+        lsp-ui-doc-position 'top
         lsp-ui-sideline-show-code-actions nil))
 
 (defun private/buffer-namespace ()
