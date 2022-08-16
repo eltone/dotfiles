@@ -46,9 +46,6 @@
 [submodule "dotbot-asdf"]
 	path = dotbot-asdf
 	url = https://github.com/sobolevn/dotbot-asdf.git
-[submodule "oh-my-zsh-themes/powerlevel9k"]
-	path = oh-my-zsh-themes/powerlevel9k
-	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = git@github.com:elzr/vim-json.git
@@ -58,3 +55,6 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule "zgen"]
+	path = zgen
+	url = git@github.com:tarjoilija/zgen.git

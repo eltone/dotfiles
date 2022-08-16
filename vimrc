@@ -1,7 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-:imap fd <Esc>
+source .vimrc.keymap
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -11,11 +12,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'rakr/vim-one'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
 Plugin 'elzr/vim-json'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,7 +44,7 @@ if &t_Co < 256
 	set nocursorline " looks bad in this mode
 else
 	set background=dark
-	colorscheme one
+	colorscheme base16-nord
 endif
 
 filetype plugin indent on

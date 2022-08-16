@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: smart class ... { ... }
+# uuid: smartclass
+# key: class
+# --
+
+${3:public} class ${1:`(file-name-base (buffer-file-name))`}
+{
+    public $1($2)
+    {
+    }
+}
