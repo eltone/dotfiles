@@ -7,7 +7,7 @@
 (when IS-MAC
   (setq ns-use-thin-smoothing t)
   (require 'exec-path-from-shell)
-  (setq-default exec-path-from-shell-shell-name "/usr/local/bin/zsh")
+  (setq-default exec-path-from-shell-shell-name "zsh")
   (exec-path-from-shell-copy-envs '("PATH" "RBENV_ROOT"))
   (exec-path-from-shell-initialize)
   (setq doom-variable-pitch-font (font-spec :family "Helvetica Neue"))
@@ -45,6 +45,7 @@
   (setq org-capture-templates
     '(("w" "Work Todo" entry (file+headline "~/org/work/work.org" "Inbox")
      "* TODO %?\n  %i\n")))
+  (setq org-log-into-drawer "LOGBOOK")
   (setq org-journal-file-type 'weekly)
   (set-company-backend! 'org-mode nil))
 
