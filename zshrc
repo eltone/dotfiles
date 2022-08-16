@@ -1,6 +1,6 @@
 ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
 
-source "${HOME}/.zgen/zgen.zsh"
+source "${HOME}/.zgenom/zgen.zsh"
 
 if ! zgen saved; then
     echo 'saving zgen conf'
@@ -12,11 +12,16 @@ if ! zgen saved; then
     zgen prezto '*:*' color 'yes'
 
     # prezto and modules
+
+    if [ "$(uname -s 2> /dev/null)" = "Darwin"]; then
+      zgen prezto osx
+      zgen prezto homebrew
+    fi
+
     zgen prezto git
     zgen prezto command-not-found
     zgen prezto syntax-highlighting
     zgen prezto tmux
-    zgen prezto ruby
     zgen prezto docker
     zgen prezto history
     zgen prezto directory

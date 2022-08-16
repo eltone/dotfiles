@@ -55,3 +55,6 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule "zgenom"]
+	path = zgenom
+	url = git@github.com:jandamm/zgenom.git
