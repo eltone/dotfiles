@@ -16,4 +16,4 @@
     ~/.config/doom: config/doom
 - shell:
   - [./fzf/install]
-  - [vim +PluginInstall +qall]
+  #- [vim +PluginInstall +qall]

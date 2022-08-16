@@ -13,9 +13,9 @@ if ! zgen saved; then
 
     # prezto and modules
 
-    if [ "$(uname -s 2> /dev/null)" = "Darwin"]; then
+    if [ "$(uname -s 2> /dev/null)" = "Darwin" ]; then
+      echo 'loading macos specific plugins'
       zgen prezto osx
-      zgen prezto homebrew
     fi
 
     zgen prezto git
@@ -25,7 +25,6 @@ if ! zgen saved; then
     zgen prezto docker
     zgen prezto history
     zgen prezto directory
-    zgen prezto completion
     zgen prezto prompt
     zgen prezto history-substring-search
 
@@ -33,10 +32,15 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-completions src
     zgen load superbrothers/zsh-kubectl-prompt
 
+    zgen prezto completion
     zgen save
 fi
 
 autoload -U colors; colors
+
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+autoload -U compinit
+compinit -C
 
 RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
