@@ -58,3 +58,6 @@
 [submodule "zgenom"]
 	path = zgenom
 	url = git@github.com:jandamm/zgenom.git
+[submodule "idea-doom-emacs"]
+	path = idea-doom-emacs
+	url = git@github.com:sei40kr/idea-doom-emacs.git

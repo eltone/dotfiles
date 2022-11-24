@@ -1,13 +1,7 @@
 - link:
-    ~/.rbenv: rbenv/
-    ~/.gemrc: gemrc
+    ~/.ideavimrc: ideavimrc
+    ~/.idea-doom-emacs: idea-doom-emacs
 
-- link:
-    ~/.rbenv/plugins/ruby-build:
-        create: true
-        path: ruby-build/
-
-- brewfile:
-    - Brewfile
-    - brew/mac_work.brewfile
-
+# - brewfile:
+#     - Brewfile
+#     - brew/mac_work.brewfile

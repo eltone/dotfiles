@@ -1,0 +1,36 @@
+source ~/.vimrc.keymap
+source ~/.idea-doom-emacs/ideavimrc
+source ~/.idea-doom-emacs/expand-region.vim
+source ~/.idea-doom-emacs/subword-mode.vim
+
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+# set easymotion
+set textobj-entire
+set ReplaceWithRegister
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Custom Mappings -------------------------
+
+map <leader>fs <Action>(SaveDocument)
+#map <leader><leader> <Action>(GotoFile)
+#map <leader>bb <Action>(Switcher)
