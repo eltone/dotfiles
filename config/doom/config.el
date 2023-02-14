@@ -42,6 +42,12 @@
      (todo . " %i %-12:c")
      (tags . " %i %-12:c")
      (search . " %i %-12:c")))
+  (setq org-agenda-custom-commands
+        '(("v" "Work agenda view"
+           ((agenda "")
+            (tags "ticket"
+                  ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                   (org-agenda-overriding-header "Tickets to write:")))))))
   (setq org-capture-templates
     '(("w" "Work Todo" entry (file+headline "~/org/work/work.org" "Inbox")
      "* TODO %?\n  %i\n")))
@@ -81,4 +87,4 @@
                           (file-name-directory buffer-file-name))
                          (projectile-project-root))))
 
-(load! "local.el" doom-private-dir t)
+(load! "local.el" doom-user-dir t)
