@@ -1,2 +1,4 @@
 vim/bundle
 config/doom/local.el
+/.DS_Store
+/config/doom/local-packages.el
