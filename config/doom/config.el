@@ -22,13 +22,10 @@
 (cond
  ((find-font (font-spec :name "Fira Code"))
   (setq doom-font (font-spec :name "Fira Code" :size 12)))
- ((find-font (font-spec :name "FiraMono Nerd Font"))
-  (setq doom-font (font-spec :name "FiraMono Nerd Font" :size 12)))
+ ((find-font (font-spec :name "FuraMono Nerd Font"))
+  (setq doom-font (font-spec :name "FuraMono Nerd Font" :size 12)))
  ((find-font (font-spec :name "FiraCode Nerd Font" :size 12))
   (setq doom-font (font-spec :name "FiraCode Nerd Font" :size 12))))
-
-(when IS-LINUX
-  (font-put doom-font :weight 'semi-light))
 
 (define-key key-translation-map (kbd "M-3") (kbd "#"))
 ;; auto reload files when changed on disk
