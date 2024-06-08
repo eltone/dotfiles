@@ -8,4 +8,4 @@
 (package! exec-path-from-shell)
 (package! flatbuffers-mode
    :recipe (:host github :repo "Asalle/flatbuffers-mode"))
-(load! "local-packages.el" doom-private-dir t)
+(load! "local-packages.el" doom-user-dir t)
