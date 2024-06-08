@@ -38,7 +38,9 @@ fi
 
 autoload -U colors; colors
 
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+if [ "$(uname -s 2> /dev/null)" = "Darwin" ]; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 autoload -U compinit
 compinit -C
 
