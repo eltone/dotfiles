@@ -15,15 +15,16 @@
 
 ;;; Frames/Windows
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
-;(add-to-list 'default-frame-alist '(ns-appearance . dark))
+                                        ;(add-to-list 'default-frame-alist '(ns-appearance . dark))
 (after! evil
   (setq evil-escape-key-sequence "fd"))
 
 (cond
  ((find-font (font-spec :name "Fira Code"))
   (setq doom-font (font-spec :name "Fira Code" :size 12)))
- ((find-font (font-spec :name "FuraMono Nerd Font"))
-  (setq doom-font (font-spec :name "FuraMono Nerd Font" :size 12)))
+ ((find-font (font-spec :name "FiraMono Nerd Font"))
+  (setq doom-font (font-spec :family "FiraMono Nerd Font Mono" :size 12 :weight 'normal)
+        doom-variable-pitch-font (font-spec :family "FiraMono Nerd Font" :size 12)))
  ((find-font (font-spec :name "FiraCode Nerd Font" :size 12))
   (setq doom-font (font-spec :name "FiraCode Nerd Font" :size 12))))
 
@@ -33,12 +34,12 @@
 (after! org
   (add-to-list 'org-modules 'org-habit)
   (setq org-startup-folded nil)
-  (setq org-agenda-files '("~/org/work" "~/org/personal"))
+  (setq org-agenda-files '("~/org/work" "~/org/personal" "~/org/journal"))
   (setq org-agenda-prefix-format
-   '((agenda . " %i %-30:c%?-12t% s")
-     (todo . " %i %-12:c")
-     (tags . " %i %-12:c")
-     (search . " %i %-12:c")))
+        '((agenda . " %i %-30:c%?-12t% s")
+          (todo . " %i %-12:c")
+          (tags . " %i %-12:c")
+          (search . " %i %-12:c")))
   (setq org-agenda-custom-commands
         '(("v" "Work agenda view"
            ((agenda "")
@@ -46,8 +47,8 @@
                   ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
                    (org-agenda-overriding-header "Tickets to write:")))))))
   (setq org-capture-templates
-    '(("w" "Work Todo" entry (file+headline "~/org/work/work.org" "Inbox")
-     "* TODO %?\n  %i\n")))
+        '(("w" "Work Todo" entry (file+headline "~/org/work/work.org" "Inbox")
+           "* TODO %?\n  %i\n")))
   (setq org-log-into-drawer "LOGBOOK")
   (setq org-journal-file-type 'weekly)
   (set-company-backend! 'org-mode nil))
@@ -76,6 +77,10 @@
         lsp-ui-doc-show-with-cursor t
         lsp-ui-doc-position 'top
         lsp-ui-sideline-show-code-actions nil))
+
+(after! dap-mode
+  (require 'dap-netcore)
+  (setq dap-python-debugger 'debugpy))
 
 (defun private/buffer-namespace ()
   (subst-char-in-string ?/ ?.
